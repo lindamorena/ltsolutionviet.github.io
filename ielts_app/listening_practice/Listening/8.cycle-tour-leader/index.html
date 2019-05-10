@@ -124,21 +124,21 @@
       "Tuesday",
       ["talk", "presentation"]
     ]
-    for (let i = 1; i <= 10; i++) {
-      let content = document.getElementById("q" + i).value;
+    for (var i = 1; i <= 10; i++) {
+      var content = document.getElementById("q" + i).value;
       if (i == 10) {
-        for (const val of arrA[i-1]) {
-          if (val.trim().toUpperCase() === content.trim().toUpperCase()) {
+        for (var j = 0; j < arrA[i - 1].length; j++ ) {
+          if (arrA[i - 1][j].trim().toUpperCase() == content.trim().toUpperCase()) {
             count += 1;
           }
         }
       } else {
-        if (arrA[i - 1].trim().toUpperCase() === content.trim().toUpperCase()) {
+        if (arrA[i - 1].trim().toUpperCase() == content.trim().toUpperCase()) {
           count += 1;
         }
       }
     }
-    if (x.style.display === "none") {
+    if (x.style.display == "none") {
       x.style.display = "block";
       document.getElementById('scoreValue').innerHTML = count;
       y.style.display = "block";

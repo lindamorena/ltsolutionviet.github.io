@@ -262,12 +262,12 @@
       var numCheckBo = 12;
       var numRadio = 4;
       var countRadioChecked = 0;
-      for (let i = 1; i <= 12; i++) {
-        let id = 'q' + i;
+      for (var i = 1; i <= 12; i++) {
+        var id = 'q' + i;
         if (i >= 1 && i <= numRadio) {
           var value = '';
           var radios = document.getElementsByName(id);
-          for (let j = 0; j < radios.length; j++) {
+          for (var j = 0; j < radios.length; j++) {
             if (radios[j].checked) {
               value = radios[j].value;
               break;
@@ -277,9 +277,9 @@
             countRadioChecked += 1;
           }
         }else if(i >= 5 && i<= 10) {
-            let content = document.getElementById(id).value;
-            for (const iterator of resultBoard[i - 1]) {
-              if (iterator.toUpperCase() === content.trim().toUpperCase()) {
+            var content = document.getElementById(id).value;
+            for (var j = 0; j < resultBoard[i - 1].length; j++) {
+              if (resultBoard[i - 1][j].toUpperCase() == content.trim().toUpperCase()) {
                 count += 1;
                 break;
               }
@@ -287,18 +287,18 @@
         } else 
         {
           if (i % 2 != 0) {
-            let content = this.getValueCheckBox(id);
-            for (val of resultBoard[i - 1]) {
-              for (contents of content) {
-                if (val == contents) count += 1;
-              }
+            var content = this.getValueCheckBox(id);
+            for (var j = 0; j < resultBoard[i - 1].length; j++ ) {
+            for (var k = 0; k < content.length; k++) {
+              if (resultBoard[i - 1][j].trim().toUpperCase() == content[k].trim().toUpperCase()) count += 1;
             }
+          }
           }
         }
       }
 
       mark = count + countRadioChecked;
-      if (x.style.display === 'none') {
+      if (x.style.display == 'none') {
         x.style.display = 'block';
         document.getElementById('scoreValue').innerHTML = mark;
         y.style.display = 'block';
@@ -328,11 +328,11 @@
     }
 
     function gcb(n, va2, va3) {
-      let inputTags = document.getElementsByName(n.name);
-      let total = 0;
+      var inputTags = document.getElementsByName(n.name);
+      var total = 0;
       // limit checkbox
-      let limit = 2;
-      for (let i = 0; i < inputTags.length; i++) {
+      var limit = 2;
+      for (var i = 0; i < inputTags.length; i++) {
         if (inputTags[i].checked) {
           total = total + 1;
         }
@@ -345,4 +345,4 @@
 
     function grd() {}
     function gtb() {}
-  </script>
+</script>

@@ -94,8 +94,8 @@
       "0216167425",
       "0462623728"
     ]
-    for (let i = 1; i <= 8; i++) {
-      let content = document.getElementById("q" + i).value;
+    for (var i = 1; i <= 8; i++) {
+      var content = document.getElementById("q" + i).value;
       str = content.replace(/\s/g, '');
       if ( arrA[i - 1].trim() === str.trim()) {
         count += 1;

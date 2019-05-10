@@ -210,22 +210,22 @@
       'C',
     ];
     var numInp = 7;
-    for (let i = 1; i <= 10; i++) {
-      let id = 'q' + i;
-      let content = document.getElementById(id);
+    for (var i = 1; i <= 10; i++) {
+      var id = 'q' + i;
+      var content = document.getElementById(id);
       if (i <= numInp) {
-        if (resultBoard[i - 1].trim().toUpperCase() === content.value.trim().toUpperCase()) {
+        if (resultBoard[i - 1].trim().toUpperCase() == content.value.trim().toUpperCase()) {
           count += 1;
         }
       } else {
-        let selectedVal = document.getElementById(id);
-        let checkedValueSe = content.options[content.selectedIndex].value;
+        var selectedVal = document.getElementById(id);
+        var checkedValueSe = content.options[content.selectedIndex].value;
         if (resultBoard[i - 1] == checkedValueSe) {
           count += 1;
         }
       }
     }
-    if (x.style.display === 'none') {
+    if (x.style.display == 'none') {
       x.style.display = 'block';
       document.getElementById('scoreValue').innerHTML = count;
       y.style.display = 'block';

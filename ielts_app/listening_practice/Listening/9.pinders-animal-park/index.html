@@ -232,21 +232,21 @@
       "0208685114",
       "color blindness"
     ]
-    for (let i = 1; i <= 10; i++) {
-      let role = arrA[i - 1].toUpperCase()
-      let content = document.getElementById("q" + i).value;
+    for (var i = 1; i <= 10; i++) {
+      var role = arrA[i - 1].toUpperCase()
+      var content = document.getElementById("q" + i).value;
       if (i == 9) {
         str = content.replace(/\s/g, '');
-        if (role.trim() === str.trim()) {
+        if (role.trim() == str.trim()) {
           count += 1;
         }
       } else {
-        if (arrA[i - 1].trim().toUpperCase() === content.trim().toUpperCase()) {
+        if (arrA[i - 1].trim().toUpperCase() == content.trim().toUpperCase()) {
           count += 1;
         }
       }
     }
-    if (x.style.display === "none") {
+    if (x.style.display == "none") {
       x.style.display = "block";
       document.getElementById('scoreValue').innerHTML = count;
       y.style.display = "block";

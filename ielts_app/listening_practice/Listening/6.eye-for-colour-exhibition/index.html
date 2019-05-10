@@ -148,8 +148,8 @@
       "lighting"
 
     ]
-    for (let i = 1; i <= 6; i++) {
-      let content = document.getElementById("q" + i).value;
+    for (var i = 1; i <= 6; i++) {
+      var content = document.getElementById("q" + i).value;
       if (arrA[i - 1].trim().toUpperCase() === content.trim().toUpperCase()) {
         count += 1;
       }

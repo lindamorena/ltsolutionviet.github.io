@@ -102,11 +102,11 @@
       'A',
       'D',
       ];
-      for (let i = 1; i <= 5; i++) {
-        let id = 'q' + i;
-        let value = '';
+      for (var i = 1; i <= 5; i++) {
+        var id = 'q' + i;
+        var value = '';
         var radios = document.getElementsByName(id);
-        for (let j = 0; j < radios.length; j++) {
+        for (var j = 0; j < radios.length; j++) {
           if (radios[j].checked) {
             value = radios[j].value;
             break;
@@ -116,7 +116,7 @@
           count += 1;
         }
       }
-      if (x.style.display === 'none') {
+      if (x.style.display == 'none') {
         x.style.display = 'block';
         document.getElementById('scoreValue').innerHTML = count;
         y.style.display = 'block';

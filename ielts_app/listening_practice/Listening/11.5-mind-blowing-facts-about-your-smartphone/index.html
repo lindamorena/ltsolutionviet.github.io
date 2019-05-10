@@ -166,17 +166,17 @@
       'C'
     ];
     var numInp = 6;
-    for (let i = 1; i <= 10; i++) {
-      let qi = 'q' + i;
+    for (var i = 1; i <= 10; i++) {
+      var qi = 'q' + i;
       if (i >= 1 && i <= numInp) {
-        let content = document.getElementById(qi).value;
-        if (resultBoard[i - 1].toUpperCase() === content.trim().toUpperCase()) {
+        var content = document.getElementById(qi).value;
+        if (resultBoard[i - 1].toUpperCase() == content.trim().toUpperCase()) {
           count += 1;
         }
       }else{
-        let value = '';
+        var value = '';
         var radios = document.getElementsByName(qi);
-        for (let j = 0; j < radios.length; j++) {
+        for (var j = 0; j < radios.length; j++) {
           if (radios[j].checked) {
             value = radios[j].value;
             break;
@@ -187,7 +187,7 @@
         }
       }
     }
-    if (x.style.display === 'none') {
+    if (x.style.display == 'none') {
       x.style.display = 'block';
       document.getElementById('scoreValue').innerHTML = count;
       y.style.display = 'block';

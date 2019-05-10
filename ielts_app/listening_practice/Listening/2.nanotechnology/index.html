@@ -218,12 +218,12 @@
       ["tests"]
     ];
     var countRadioChecked = 0;
-    for (let i = 1; i <= 10; i++) {
-      let id = "q" + i;
+    for (var i = 1; i <= 10; i++) {
+      var id = "q" + i;
       if (i <= 3) {
         var value = "";
         var radios = document.getElementsByName(id);
-        for (let j = 0; j < radios.length; j++) {
+        for (var j = 0; j < radios.length; j++) {
           if (radios[j].checked) {
             value = radios[j].value;
             break;
@@ -233,9 +233,9 @@
           countRadioChecked += 1;
         }
       } else {
-        let content = document.getElementById(id).value;
-        for (value of resultBoard[i - 1]) {
-          if (value.trim().toUpperCase() === content.trim().toUpperCase()) {
+        var content = document.getElementById(id).value;
+        for (var j = 0; j < resultBoard[i - 1].length; j++ ) {
+          if (resultBoard[i - 1][j].trim().toUpperCase() == content.trim().toUpperCase()) {
             count += 1;
             break;
           }
@@ -244,7 +244,7 @@
     }
 
     mark = count + countRadioChecked;
-    if (x.style.display === "none") {
+    if (x.style.display == "none") {
       x.style.display = "block";
       document.getElementById("scoreValue").innerHTML = mark;
       y.style.display = "block";

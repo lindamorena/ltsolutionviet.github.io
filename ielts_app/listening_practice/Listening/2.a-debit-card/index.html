@@ -91,14 +91,14 @@
       'date',
       'chip'
     ];
-    for (let i = 1; i <= 6; i++) {
-      let role = arrA[i - 1].toUpperCase()
-      let content = document.getElementById("q" + i).value;
-      if (role.trim() === content.trim().toUpperCase()) {
+    for (var i = 1; i <= 6; i++) {
+      var role = arrA[i - 1].toUpperCase()
+      var content = document.getElementById("q" + i).value;
+      if (role.trim() == content.trim().toUpperCase()) {
         count += 1;
       }
     }
-    if (x.style.display === "none") {
+    if (x.style.display == "none") {
       x.style.display = "block";
       document.getElementById("scoreValue").innerHTML = count;
       y.style.display = "block";

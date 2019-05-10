@@ -174,12 +174,12 @@
       'river'
     ];
     var numRa = 6;
-    for (let i = 1; i <= 10; i++) {
-      let id = 'q' + i;
+    for (var i = 1; i <= 10; i++) {
+      var id = 'q' + i;
       if (i <= numRa) {
-        let value = '';
+        var value = '';
         var radios = document.getElementsByName(id);
-        for (let j = 0; j < radios.length; j++) {
+        for (var j = 0; j < radios.length; j++) {
           if (radios[j].checked) {
             value = radios[j].value;
             break;
@@ -189,7 +189,7 @@
           count += 1;
         }
       } else {
-        let content = document.getElementById(id).value;
+        var content = document.getElementById(id).value;
         if (resultBoard[i - 1].trim().toUpperCase() === content.trim().toUpperCase()) {
           count += 1;
         }

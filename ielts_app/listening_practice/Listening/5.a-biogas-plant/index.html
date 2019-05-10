@@ -307,10 +307,10 @@
       'A',
       'E'
     ];
-    for (let i = 1; i <= 10; i++) {
-      let id = 'q' + i;
-      let content = document.getElementById(id);
-      let checkedValueSe = content.options[content.selectedIndex].value;
+    for (var i = 1; i <= 10; i++) {
+      var id = 'q' + i;
+      var content = document.getElementById(id);
+      var checkedValueSe = content.options[content.selectedIndex].value;
       if (resultBoard[i - 1] == checkedValueSe) {
         count += 1;
       }
@@ -346,11 +346,11 @@
   }
 
   function gcb(n, va2, va3) {
-    let inputTags = document.getElementsByName(n.name);
-    let total = 0;
+    var inputTags = document.getElementsByName(n.name);
+    var total = 0;
     // limit checkbox
-    let limit = 2;
-    for (let i = 0; i < inputTags.length; i++) {
+    var limit = 2;
+    for (var i = 0; i < inputTags.length; i++) {
       if (inputTags[i].checked) {
         total = total + 1;
       }

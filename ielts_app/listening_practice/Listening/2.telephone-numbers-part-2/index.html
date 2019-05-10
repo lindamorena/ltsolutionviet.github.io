@@ -102,15 +102,15 @@
       "339279",
       "04255781"
     ];
-    for (let i = 1; i <= 9; i++) {
-      let role = arrA[i - 1].toUpperCase();
-      let content = document.getElementById("q" + i).value;
+    for (var i = 1; i <= 9; i++) {
+      var role = arrA[i - 1].toUpperCase();
+      var content = document.getElementById("q" + i).value;
         str = content.replace(/\s/g,'');
-        if (role.trim() === str.trim()) {
+        if (role.trim() == str.trim()) {
           count += 1;
         }
     }
-    if (x.style.display === "none") {
+    if (x.style.display == "none") {
       x.style.display = "block";
       document.getElementById("scoreValue").innerHTML = count;
       y.style.display = "block";

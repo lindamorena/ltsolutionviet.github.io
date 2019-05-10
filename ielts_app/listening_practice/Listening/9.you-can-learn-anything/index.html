@@ -117,10 +117,10 @@
       ['NOT GIVEN']
 
     ];
-    for (let i = 1; i <= 4; i++) {
-      let id = 'q' + i;
-      let selectedVal = document.getElementById(id);
-      let checkedValueSe = selectedVal.options[selectedVal.selectedIndex].value;
+    for (var i = 1; i <= 4; i++) {
+      var id = 'q' + i;
+      var selectedVal = document.getElementById(id);
+      var checkedValueSe = selectedVal.options[selectedVal.selectedIndex].value;
       if (resultBoard[i - 1] == checkedValueSe) {
         count += 1;
       }

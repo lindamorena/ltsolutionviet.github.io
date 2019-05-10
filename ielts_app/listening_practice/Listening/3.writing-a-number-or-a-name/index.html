@@ -106,18 +106,18 @@
       'Lovers'
     ];
 
-    for (let i = 1; i <= 8; i++) {
-      let content = document.getElementById('q' + i).value;
+    for (var i = 1; i <= 8; i++) {
+      var content = document.getElementById('q' + i).value;
       if(i == 6 || i == 7){
         str = content.replace(/\s/g,'');
-        if (resultBoard[i-1].trim() === str.trim()) {
+        if (resultBoard[i-1].trim() == str.trim()) {
           count += 1;
         }
       }else {
         if (resultBoard[i-1].trim().toUpperCase() == content.trim().toUpperCase()) count += 1;
       }
     }
-    if (x.style.display === 'none') {
+    if (x.style.display == 'none') {
       x.style.display = 'block';
       document.getElementById('scoreValue').innerHTML = count;
       y.style.display = 'block';

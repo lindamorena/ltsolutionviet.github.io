@@ -191,42 +191,42 @@
       <table class="table table-bordered table-condensed text-left" style="width: 100%">
         <tbody>
           <tr>
-            <td style="width: 10%"><b>1.</b> A : <span style="font-style: italic"></span> <span
+            <td style="width: 10%"><b>1.</b> A <span style="font-style: italic"></span> <span
                 class="glyphicon glyphicon-remove" style="color: red"></span>
             </td>
-            <td style="width: 10%"><b>6.</b> B : <span style="font-style: italic"></span> <span
+            <td style="width: 10%"><b>6.</b> B <span style="font-style: italic"></span> <span
                 class="glyphicon glyphicon-remove" style="color: red"></span>
             </td>
           </tr>
           <tr>
-            <td style="width: 10%"><b>2.</b> A : <span style="font-style: italic"></span> <span
+            <td style="width: 10%"><b>2.</b> A <span style="font-style: italic"></span> <span
                 class="glyphicon glyphicon-remove" style="color: red"></span>
             </td>
-            <td style="width: 10%"><b>7.</b> A,D IN EITHER ORDER : <span style="font-style: italic">D</span> <span
+            <td style="width: 10%"><b>7.</b> A,D IN EITHER ORDER <span style="font-style: italic">D</span> <span
                 class="glyphicon glyphicon-ok" style="color: green"></span>
             </td>
           </tr>
           <tr>
-            <td style="width: 10%"><b>3.</b> C : <span style="font-style: italic"></span> <span
+            <td style="width: 10%"><b>3.</b> C <span style="font-style: italic"></span> <span
                 class="glyphicon glyphicon-remove" style="color: red"></span>
             </td>
-            <td style="width: 10%"><b>8.</b> A,D IN EITHER ORDER : <span style="font-style: italic"></span> <span
-                class="glyphicon glyphicon-remove" style="color: red"></span>
-            </td>
-          </tr>
-          <tr>
-            <td style="width: 10%"><b>4.</b> B : <span style="font-style: italic"></span> <span
-                class="glyphicon glyphicon-remove" style="color: red"></span>
-            </td>
-            <td style="width: 10%"><b>9.</b> C,E IN EITHER ORDER : <span style="font-style: italic"></span> <span
+            <td style="width: 10%"><b>8.</b> A,D IN EITHER ORDER <span style="font-style: italic"></span> <span
                 class="glyphicon glyphicon-remove" style="color: red"></span>
             </td>
           </tr>
           <tr>
-            <td style="width: 10%"><b>5.</b> B : <span style="font-style: italic"></span> <span
+            <td style="width: 10%"><b>4.</b> B <span style="font-style: italic"></span> <span
                 class="glyphicon glyphicon-remove" style="color: red"></span>
             </td>
-            <td style="width: 10%"><b>10.</b> C,E IN EITHER ORDER : <span style="font-style: italic"></span> <span
+            <td style="width: 10%"><b>9.</b> C,E IN EITHER ORDER <span style="font-style: italic"></span> <span
+                class="glyphicon glyphicon-remove" style="color: red"></span>
+            </td>
+          </tr>
+          <tr>
+            <td style="width: 10%"><b>5.</b> B <span style="font-style: italic"></span> <span
+                class="glyphicon glyphicon-remove" style="color: red"></span>
+            </td>
+            <td style="width: 10%"><b>10.</b> C,E IN EITHER ORDER <span style="font-style: italic"></span> <span
                 class="glyphicon glyphicon-remove" style="color: red"></span>
             </td>
           </tr>
@@ -269,24 +269,24 @@
     var numCheckBo = 10;
     var numRadio = 6;
     var countRadioChecked = 0;
-    for (let i = 1; i <= 10; i++) {
+    for (var i = 1; i <= 10; i++) {
       if (i >= 7 && i <= numCheckBo) {
         if (i % 2 != 0) {
-          let id = 'q' + i;
-          let content = this.getValueCheckBox(id);
-          let checkedMar = false;
-          for (value of resultBoard[i - 1]) {
-            for (contents of content) {
-              if (value == contents) count += 1;
+          var id = 'q' + i;
+          var content = this.getValueCheckBox(id);
+          var checkedMar = false;
+          for (var j = 0; j < resultBoard[i - 1].length; j++ ) {
+            for (var k = 0; k < content.length; k++) {
+              if (resultBoard[i - 1][j].trim().toUpperCase() == content[k].trim().toUpperCase()) count += 1;
             }
           }
         }
       }
       if (i >= 1 && i <= numRadio) {
-        let id = 'q' + i;
+        var id = 'q' + i;
         var value = '';
         var radios = document.getElementsByName('q' + i);
-        for (let j = 0; j < radios.length; j++) {
+        for (var j = 0; j < radios.length; j++) {
           if (radios[j].checked) {
             value = radios[j].value;
             break;
@@ -298,7 +298,7 @@
       }
     }
     mark = count + countRadioChecked;
-    if (x.style.display === 'none') {
+    if (x.style.display == 'none') {
       x.style.display = 'block';
       document.getElementById('scoreValue').innerHTML = mark;
       y.style.display = 'block';
@@ -319,11 +319,11 @@
   // limit 2 checkbox
 
   function gcb(n, va2, va3) {
-    let inputTags = document.getElementsByName(n.name);
-    let total = 0;
+    var inputTags = document.getElementsByName(n.name);
+    var total = 0;
     // limit checkbox
-    let limit = 2;
-    for (let i = 0; i < inputTags.length; i++) {
+    var limit = 2;
+    for (var i = 0; i < inputTags.length; i++) {
       if (inputTags[i].checked) {
         total = total + 1;
       }

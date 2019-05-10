@@ -138,10 +138,10 @@
       ['payment', 'payments', 'money']
     ];
 
-    for (let i = 1; i <= 10; i++) {
-      let content = document.getElementById('q' + i).value;
-      for (value of resultBoard[i - 1]) {
-        if (value.trim().toUpperCase() == content.trim().toUpperCase()) count += 1;
+    for (var i = 1; i <= 10; i++) {
+      var content = document.getElementById('q' + i).value;
+      for (var j = 0; j < resultBoard[i - 1].length; j++ )  {
+        if (resultBoard[i - 1][j].trim().toUpperCase() == content.trim().toUpperCase()) count += 1;
       }
     }
     if (x.style.display === 'none') {

@@ -162,25 +162,25 @@
       'be well prepared',
       'C'
     ];
-    for (let i = 1; i <= 10; i++) {
-      let qi = 'q' + i;
+    for (var i = 1; i <= 10; i++) {
+      var qi = 'q' + i;
       if (i >= 6 && i <= 9) {
-        let content = document.getElementById(qi).value;
+        var content = document.getElementById(qi).value;
         if(i == 8){
-          for (const val of resultBoard[i - 1]) {
-            if (val.trim().toUpperCase() == content.trim().toUpperCase()) {
+          for (var j = 0; j < resultBoard[i - 1].length; j++ ) {
+            if (resultBoard[i - 1][j].trim().toUpperCase() == content.trim().toUpperCase()) {
               count += 1;
             }
           }
         }else {
-          if (resultBoard[i - 1].toUpperCase() === content.trim().toUpperCase()) {
+          if (resultBoard[i - 1].toUpperCase() == content.trim().toUpperCase()) {
             count += 1;
           }
         }
       } else {
-        let value = '';
+        var value = '';
         var radios = document.getElementsByName(qi);
-        for (let j = 0; j < radios.length; j++) {
+        for (var j = 0; j < radios.length; j++) {
           if (radios[j].checked) {
             value = radios[j].value;
             break;
@@ -191,7 +191,7 @@
         }
       }
     }
-    if (x.style.display === 'none') {
+    if (x.style.display == 'none') {
       x.style.display = 'block';
       document.getElementById('scoreValue').innerHTML = count;
       y.style.display = 'block';

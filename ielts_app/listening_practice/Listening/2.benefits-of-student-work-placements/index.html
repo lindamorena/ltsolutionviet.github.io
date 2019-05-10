@@ -204,13 +204,13 @@
       "C"
     ];
     var numRadio = 6;
-    for (let i = 1; i <= 10; i++) {
-      let id = 'q' + i;
+    for (var i = 1; i <= 10; i++) {
+      var id = 'q' + i;
       if (i <= numRadio) {
-        let id = 'q' + i;
-        let checkedValueRa = '';
-        let radios = document.getElementsByName(id);
-        for (let j = 0; j < radios.length; j++) {
+        var id = 'q' + i;
+        var checkedValueRa = '';
+        var radios = document.getElementsByName(id);
+        for (var j = 0; j < radios.length; j++) {
           if (radios[j].checked) {
             checkedValueRa = radios[j].value;
             break;
@@ -220,15 +220,15 @@
           count += 1;
         }
       } else {
-        let selectedVal = document.getElementById(id);
-        let checkedValueSe = selectedVal.options[selectedVal.selectedIndex].value;
+        var selectedVal = document.getElementById(id);
+        var checkedValueSe = selectedVal.options[selectedVal.selectedIndex].value;
         if (resultBoard[i - 1] == checkedValueSe) {
           count += 1;
         }
       }
     }
     mark = count;
-    if (x.style.display === 'none') {
+    if (x.style.display == 'none') {
       x.style.display = 'block';
       document.getElementById('scoreValue').innerHTML = mark;
       y.style.display = 'block';

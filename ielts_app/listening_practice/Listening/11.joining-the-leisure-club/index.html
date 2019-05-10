@@ -178,8 +178,7 @@
   </p>
 </div>
 
-<script>
-  var audi = document.getElementById("myAudio");
+<script type="text/javascript">
   function submit() {
     var x = document.getElementById('test');
     var y = document.getElementById('buttonHidden');
@@ -198,29 +197,29 @@
       ['photo card', 'photo cards']
     ];
     var numCheckBo = 2;
-    for (let i = 1; i <= 10; i++) {
-      let id = 'q' + i;
+    for (var i = 1; i <= 10; i++) {
+      var id = 'q' + i;
       if (i <= numCheckBo) {
         if (i % 2 != 0) {
-          let content = this.getValueCheckBox(id);
-          let checkedMar = false;
-          for (value of resultBoard[i - 1]) {
-            for (contents of content) {
-              if (value == contents) count += 1;
+          var content = this.getValueCheckBox(id);
+          var checkedMar = false;
+          for (var j = 0; j < resultBoard[i - 1].length; j++ ) {
+            for (var k = 0; k < content.length; k++) {
+              if (resultBoard[i - 1][j].trim().toUpperCase() == content[k].trim().toUpperCase()) count += 1;
             }
           }
         }
       } else {
-        let radios = document.getElementById(id);
-        for (value of resultBoard[i - 1]) {
-          if (value.toUpperCase() == radios.value.toUpperCase().trim()) {
+        var radios = document.getElementById(id);
+         for (var j = 0; j < resultBoard[i - 1].length; j++ ) {
+          if (resultBoard[i - 1][j].toUpperCase() == radios.value.toUpperCase().trim()) {
             count += 1;
             break;
           }
         }
       }
     }
-    if (x.style.display === 'none') {
+    if (x.style.display == 'none') {
       x.style.display = 'block';
       document.getElementById('scoreValue').innerHTML = count;
       y.style.display = 'block';
@@ -238,11 +237,11 @@
   }
 
   function gcb(n, va2, va3) {                    
-    let inputTags = document.getElementsByName(n.name);            
-    let total = 0;
+    var inputTags = document.getElementsByName(n.name);            
+    var total = 0;
     // limit checkbox
-    let limit = 2;
-    for (let i = 0; i < inputTags.length; i++) {
+    var limit = 2;
+    for (var i = 0; i < inputTags.length; i++) {
       if (inputTags[i].checked) {                      
         total = total + 1;
       }

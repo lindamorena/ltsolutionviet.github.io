@@ -153,15 +153,15 @@
       ['A', 'D']
     ];
     var numCheckBo = 8;
-    for (let i = 1; i <= 10; i++) {
+    for (var i = 1; i <= 10; i++) {
       if (i <= numCheckBo) {
         if (i % 2 != 0) {
-          let id = 'q' + i;
-          let content = this.getValueCheckBox(id);
-          let checkedMar = false;
-          for (value of resultBoard[i - 1]) {
-            for (contents of content) {
-              if (value == contents) count += 1;
+          var id = 'q' + i;
+          var content = this.getValueCheckBox(id);
+          var checkedMar = false;
+          for (var j = 0; j < resultBoard[i - 1].length; j++ ) {
+            for (var k = 0; k < content.length; k++) {
+              if (resultBoard[i - 1][j].trim().toUpperCase() == content[k].trim().toUpperCase()) count += 1;
             }
           }
         }
@@ -198,11 +198,11 @@
   }
 
   function gcb(n, va2, va3) {
-    let inputTags = document.getElementsByName(n.name);
-    let total = 0;
+    var inputTags = document.getElementsByName(n.name);
+    var total = 0;
     // limit checkbox
-    let limit = 2;
-    for (let i = 0; i < inputTags.length; i++) {
+    var limit = 2;
+    for (var i = 0; i < inputTags.length; i++) {
       if (inputTags[i].checked) {
         total = total + 1;
       }

@@ -160,29 +160,29 @@
       ['(musical) instruments', 'musical instruments', 'instruments']
     ];
     var numCheckBo = 3;
-    for (let i = 1; i <= 11; i++) {
-      let id = 'q' + i;
+    for (var i = 1; i <= 11; i++) {
+      var id = 'q' + i;
       if (i <= numCheckBo) {
         if (i % 2 != 0 &&  i != 3) {
-          let content = this.getValueCheckBox(id);
-          let checkedMar = false;
-          for (value of resultBoard[i - 1]) {
-            for (contents of content) {
-              if (value == contents) count += 1;
+          var content = this.getValueCheckBox(id);
+          var checkedMar = false;
+          for (var j = 0; j < resultBoard[i - 1].length; j++ ) {
+            for (var k = 0; k < content.length; k++) {
+              if (resultBoard[i - 1][j].trim().toUpperCase() == content[k].trim().toUpperCase()) count += 1;
             }
           }
         }
       } else {
-        let radios = document.getElementById(id);
-        for (value of resultBoard[i - 1]) {
-          if (value.trim().toUpperCase() == radios.value.trim().toUpperCase()) {
+        var radios = document.getElementById(id);
+        for (var j = 0; j < resultBoard[i - 1].length; j++ ) {
+          if (resultBoard[i - 1][j].trim().toUpperCase() == radios.value.trim().toUpperCase()) {
             count += 1;
             break;
           }
         }
       }
     }
-    if (x.style.display === 'none') {
+    if (x.style.display == 'none') {
       x.style.display = 'block';
       document.getElementById('scoreValue').innerHTML = count;
       y.style.display = 'block';
@@ -200,15 +200,15 @@
   }
 
   function gcb(n, va2, va3) {
-    let inputTags = document.getElementsByName(n.name);
-    let total = 0;
+    var inputTags = document.getElementsByName(n.name);
+    var total = 0;
     // limit checkbox
-    let limit = 3;
+    var limit = 3;
     if(inputTags[0].checked){
       inputTags[0].checked = false;
       return;
     }
-    for (let i = 0; i < inputTags.length; i++) {
+    for (var i = 0; i < inputTags.length; i++) {
       if (inputTags[i].checked) {
         total = total + 1;
       }

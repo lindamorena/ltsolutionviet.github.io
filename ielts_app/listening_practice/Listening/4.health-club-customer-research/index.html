@@ -213,11 +213,11 @@
       "air conditioning",
       "restaurant"
     ]
-    for (let i = 1; i <= 10; i++) {
-      let content = document.getElementById("q" + i).value;
+    for (var i = 1; i <= 10; i++) {
+      var content = document.getElementById("q" + i).value;
       if(i == 4){
-        for (const val of arrA[i - 1]) {
-          if (val.trim().toUpperCase() === content.trim().toUpperCase()) {
+         for (var j = 0; j < arrA[i - 1].length; j++ ) {
+          if (arrA[i - 1][j].trim().toUpperCase() === content.trim().toUpperCase()) {
             count += 1;
             break;
         }

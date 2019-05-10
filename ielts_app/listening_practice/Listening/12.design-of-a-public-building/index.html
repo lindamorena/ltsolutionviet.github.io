@@ -183,13 +183,13 @@
     "curtains" ,
     "international" 
     ]
-    for(let i = 1; i<=10; i++) {
-      let content = document.getElementById("q" + i).value;
-      if(arrA[i-1].trim().toUpperCase() === content.trim().toUpperCase()) {
+    for(var i = 1; i<=10; i++) {
+      var content = document.getElementById("q" + i).value;
+      if(arrA[i-1].trim().toUpperCase() == content.trim().toUpperCase()) {
         count += 1;
       }
     }
-    if (x.style.display === "none") {
+    if (x.style.display == "none") {
       x.style.display = "block";
       document.getElementById('scoreValue').innerHTML =count;
       y.style.display = "block";

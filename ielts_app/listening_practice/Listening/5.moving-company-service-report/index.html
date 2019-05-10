@@ -226,9 +226,9 @@
       'C',
     ];
     var numIn = 6;
-    for (let i = 1; i <= 10; i++) {
-      let id = 'q' + i;
-      let content = document.getElementById(id);
+    for (var i = 1; i <= 10; i++) {
+      var id = 'q' + i;
+      var content = document.getElementById(id);
       if (i <= numIn) {
         if (i == 1) {
           str = content.value.replace(/\s/g, '');
@@ -241,8 +241,8 @@
           }
         }
       } else {
-        let selectedVal = document.getElementById(id);
-        let checkedValueSe = content.options[content.selectedIndex].value;
+        var selectedVal = document.getElementById(id);
+        var checkedValueSe = content.options[content.selectedIndex].value;
         if (resultBoard[i - 1] == checkedValueSe) {
           count += 1;
         }

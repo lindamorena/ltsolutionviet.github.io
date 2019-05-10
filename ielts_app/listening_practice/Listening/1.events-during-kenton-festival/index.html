@@ -217,8 +217,8 @@
       "outdoor",
       "logo"
     ];
-    for (let i = 1; i <= 10; i++) {
-      let content = document.getElementById("q" + i).value;
+    for (var i = 1; i <= 10; i++) {
+      var content = document.getElementById("q" + i).value;
       if (arrA[i - 1].trim().toUpperCase() === content.trim().toUpperCase()) {
         count += 1;
       }

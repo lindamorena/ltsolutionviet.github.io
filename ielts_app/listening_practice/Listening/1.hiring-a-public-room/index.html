@@ -192,8 +192,7 @@
       class="btn btn-success"
       data-toggle="modal"
       data-target="#confirmSubmit"
-      ><i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp;Submit</a
-    >
+      ><i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>&nbsp;Submit</a>
   </p>
   <p id="buttonHidden" style="display: none">
     <a onclick="hiddenForm()" class="btn btn-success"
@@ -220,15 +219,15 @@
       ["floor","floors"],
       ["decoration","decorations"]
     ];
-    for (let i = 1; i <= 10; i++) {
-      let content = document.getElementById("q" + i).value;
-      for (value of arrA[i - 1]) {
-        if (value.trim().toUpperCase() === content.trim().toUpperCase()) {
+    for (var i = 0; i <= arrA.length -1; i++) {
+      var content = document.getElementById("q" + (i+1)).value;
+     for (var j = 0; j <= arrA[i].length -1 ; j++) {
+        if (arrA[i][j].trim().toUpperCase() == content.trim().toUpperCase()) {
           count += 1;
         }
       }
     }
-    if (x.style.display === "none") {
+    if (x.style.display == "none") {
       x.style.display = "block";
       document.getElementById("scoreValue").innerHTML = count;
       y.style.display = "block";

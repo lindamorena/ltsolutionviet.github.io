@@ -239,9 +239,6 @@
 
   <div id="test" style="display: none">
     <div class="stats-right">
-      <h3 class="text-center" style="color: #aaaaaa">
-        Solution for: Rocky Bay field trip
-      </h3>
       <div class="upper-stats">
         <h1>
           Your Band Score: <b><b id="scoreValue"></b> / 10</b>
@@ -312,15 +309,15 @@
       ["painting"],
       ["ladder", "ladders"]
     ];
-    for (let i = 1; i <= 10; i++) {
-      let content = document.getElementById("q" + i).value;
-      for (value of arrA[i - 1]) {
-        if (value.toUpperCase() === content.trim().toUpperCase()) {
+    for (var i = 1; i <= 10; i++) {
+      var content = document.getElementById("q" + i).value;
+      for (var j = 0; j < arrA[i - 1].length; j++) {
+        if (arrA[i - 1][j].toUpperCase() == content.trim().toUpperCase()) {
           count += 1;
         }
       }
     }
-    if (x.style.display === "none") {
+    if (x.style.display == "none") {
       x.style.display = "block";
       document.getElementById("scoreValue").innerHTML = count;
       y.style.display = "block";

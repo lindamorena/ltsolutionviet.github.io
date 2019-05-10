@@ -148,11 +148,11 @@
       'C',
       'B'
     ];
-    for (let i = 1; i <= 5; i++) {
-      let id = 'q' + i;
-      let value = '';
+    for (var i = 1; i <= 5; i++) {
+      var id = 'q' + i;
+      var value = '';
       var radios = document.getElementsByName(id);
-      for (let j = 0; j < radios.length; j++) {
+      for (var j = 0; j < radios.length; j++) {
         if (radios[j].checked) {
           value = radios[j].value;
           break;

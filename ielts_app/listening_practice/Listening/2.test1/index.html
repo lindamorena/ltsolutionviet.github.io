@@ -112,15 +112,15 @@
      ["903036602"]
 
     ];
-    for (let i = 1; i <= 10; i++) {
-      let content = document.getElementById("q" + i).value;
-      for (value of arrA[i - 1]) {
-        if (value.trim().toUpperCase() === content.trim().toUpperCase()) {
+    for (var i = 1; i <= 10; i++) {
+      var content = document.getElementById("q" + i).value;
+      for (var j = 0; j < arrA[i - 1].length; j++ ) {
+        if (arrA[i - 1][j].trim().toUpperCase() == content.trim().toUpperCase()) {
           count += 1;
         }
       }
     }
-    if (x.style.display === "none") {
+    if (x.style.display == "none") {
       x.style.display = "block";
       document.getElementById("scoreValue").innerHTML = count;
       y.style.display = "block";
