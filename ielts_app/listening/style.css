@@ -712,14 +712,3 @@ ul { padding-left: 1.2em; }
 input[type=text]{border:1px solid #ccc;border-radius:4px; width:160px;  height: 32px; padding: 5px;margin: 3px;}
 input[type=text]:valid{background-color:#90ee90;font-size: 15px;}
 input[type=text]:invalid{background-color:#ffe4e1}
-@supports (zoom:1.2) {
-	input[type="radio"],  input[type=checkbox]{
-	zoom: 1.2;
-	}
-}
-@supports not (zoom:1.2) {
-	input[type="radio"],  input[type=checkbox]{
-		transform: scale(1.2);
-		margin: 10px;
-	}
-}
