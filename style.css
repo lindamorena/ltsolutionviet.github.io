@@ -4,7 +4,7 @@ img{display: inline;height: auto;max-width: 100%;}
 
 body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.42857143;
     color: #333;
     background-color: #fff;
@@ -32,7 +32,7 @@ input[type=text]:invalid{background-color:#ffe4e1}
     display: inline-block;
     padding: 6px 48px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.42857143;
     text-align: center;
