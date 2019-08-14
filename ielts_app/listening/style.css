@@ -19,7 +19,7 @@ html,body{
 }
 body 
 {
-	font-family: MyFont;
+    font-family: MyFont;
     font-size: medium;
     /*text-align: justify;*/
 }
@@ -216,7 +216,7 @@ button[onclick="answers()"], button[onclick="noanswers()"] {
 }
 
 input {
-	font-size: 11px;
+ font-size: 12px;
   font-family: inherit;
   color: inherit;
   -webkit-box-sizing: border-box;
