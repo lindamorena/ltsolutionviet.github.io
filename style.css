@@ -86,11 +86,11 @@ input[type=text]:invalid{background-color:#ffe4e1}
 }
 
 select {
-    min-width: 80px !important;
+     min-width: 90px !important;
     cursor: pointer;
     display: inline-block;
     position: relative;
-    font: normal 11px/23px Arial, Sans-Serif;
+    font: normal 15px/23px Arial, Sans-Serif;
     color: #F44336;
     border: 1px solid #ccc;
 }
