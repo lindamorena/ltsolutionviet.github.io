@@ -90,10 +90,10 @@ select {
     cursor: pointer;
     display: inline-block;
     position: relative;
-    font: normal 17px/23px Arial, Sans-Serif;
+    font: 20px Arial, Sans-Serif;
     color: #F44336;
     border: 1px solid #ccc;
-    height: 45px;
+    height: 40px !important;
 }
 
 .video-wrapper {
