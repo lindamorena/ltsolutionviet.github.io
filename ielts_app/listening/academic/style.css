@@ -212,7 +212,7 @@ button[onclick="answers()"], button[onclick="noanswers()"] {
 }
 
 input {
-	font-size: 11px;
+  font-size: 13px;
   font-family: inherit;
   color: inherit;
   -webkit-box-sizing: border-box;
@@ -308,7 +308,7 @@ input {
 
 table {
 	line-height:100%;
-	width: 90%;
+	width: 100% !important;
 }
 
 .useful-links{
@@ -329,10 +329,10 @@ input.ex-input{
    border-bottom: 1px solid #000;
    background: #FFF !important; /* желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым*/
    outline: none; /* удаляет обводку в браузерах хром(желтая) и сафари(синяя)*/
-   height: 24px; /* высота на свое усмотрение*/
-   width: 100px; /* ширина на свое усмотрение*/
+   height: 32px; /* высота на свое усмотрение*/
+   width: 120px; /* ширина на свое усмотрение*/
    color: #009; /*цвет шрифта в обычном состоянии*/
-   font-size: 14px; /* Размер шрифта*/
+   font-size: 15px; /* Размер шрифта*/
 }
 
 .ex-but, .ex-but:active {
@@ -706,6 +706,6 @@ ul { padding-left: 1.2em; }
     line-height: 130%;
 }
 
-input[type=text]{border:1px solid #ccc;border-radius:4px; width:160px;padding: 5px;margin: 3px;}
+input[type=text]{border:1px solid #ccc;border-radius:4px; width:160px;padding: height: 32px; 5px;margin: 3px;}
 input[type=text]:valid{background-color:#90ee90;font-size: 15px;}
 input[type=text]:invalid{background-color:#ffe4e1}
